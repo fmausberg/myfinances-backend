@@ -38,6 +38,8 @@ public class SentenceService {
         return sentenceRepository.findById(id)
                 .map(sentence -> {
                     sentence.setDescription(updatedSentence.getDescription());
+                    sentence.setTransactions(updatedSentence.getTransactions());
+                    sentence.setTimestamp(updatedSentence.getTimestamp());
                     return sentenceRepository.save(sentence);
                 })
                 .orElseThrow(() -> new IllegalArgumentException("Sentence not found with id: " + id));

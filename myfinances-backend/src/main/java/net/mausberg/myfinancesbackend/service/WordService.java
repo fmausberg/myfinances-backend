@@ -38,7 +38,6 @@ public class WordService {
         return wordRepository.findById(id)
                 .map(word -> {
                     word.setAccount(updatedWord.getAccount());
-                    word.setTransaction(updatedWord.getTransaction());
                     word.setValue(updatedWord.getValue());
                     word.setPerson(updatedWord.getPerson());
                     word.setCompany(updatedWord.getCompany());

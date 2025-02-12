@@ -20,10 +20,6 @@ public class Word {
     @JoinColumn(name = "account_id")
     private Account account;
 
-    @ManyToOne
-    @JoinColumn(name = "transaction_id")
-    private Transaction transaction;
-
     @Column(precision = 10, scale = 2)
     private BigDecimal value;
 
@@ -38,4 +34,8 @@ public class Word {
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
+
+    @ManyToOne
+    @JoinColumn(name = "sentence_id")
+    private Sentence sentence;
 }
