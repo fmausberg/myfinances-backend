@@ -38,5 +38,5 @@ public class Account {
     private AppUser user;
 
     @Column(nullable = false)
-    private Integer displayorder;
+    private Integer displayOrder;
 }
