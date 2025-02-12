@@ -28,4 +28,7 @@ public class Sentence {
         inverseJoinColumns = @JoinColumn(name = "transaction_id")
     )
     private Set<Transaction> transactions;
+
+    @OneToMany(mappedBy = "sentence", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Word> words;
 }

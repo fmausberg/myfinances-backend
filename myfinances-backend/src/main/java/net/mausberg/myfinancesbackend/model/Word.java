@@ -34,4 +34,8 @@ public class Word {
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
+
+    @ManyToOne
+    @JoinColumn(name = "sentence_id")
+    private Sentence sentence;
 }
