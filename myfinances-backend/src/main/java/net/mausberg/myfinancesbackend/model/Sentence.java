@@ -1,6 +1,7 @@
 package net.mausberg.myfinancesbackend.model;
 
 import java.util.Date;
+import java.util.Set;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,4 +20,12 @@ public class Sentence {
     private String description;
 
     private Date timestamp;
+
+    @ManyToMany
+    @JoinTable(
+        name = "sentence_transaction",
+        joinColumns = @JoinColumn(name = "sentence_id"),
+        inverseJoinColumns = @JoinColumn(name = "transaction_id")
+    )
+    private Set<Transaction> transactions;
 }
