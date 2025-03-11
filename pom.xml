@@ -75,8 +75,8 @@
         <!-- Local Project Dependency -->
         <dependency>
             <groupId>net.mausberg</groupId>
-            <artifactId>authentication-framework-backend</artifactId>
-            <version>0.2.0</version>
+            <artifactId>authframework-backend</artifactId>
+            <version>LATEST</version>
         </dependency>
 
         <!-- Testing -->
